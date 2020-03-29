@@ -1,0 +1,7 @@
+{
+  "name": "LINC-prototype",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
