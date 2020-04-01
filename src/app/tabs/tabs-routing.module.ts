@@ -18,45 +18,55 @@ const routes: Routes = [
         ]
       },
       {
-        path: 'tab1',
+        path: 'blogs',
         children: [
           {
             path: '',
             loadChildren: () =>
-              import('../tab1/tab1.module').then(m => m.Tab1PageModule)
+              import('../blogs/blogs.module').then(m => m.BlogsPageModule)
           }
         ]
       },
       {
-        path: 'tab2',
+        path: 'start-ups',
         children: [
           {
             path: '',
             loadChildren: () =>
-              import('../tab2/tab2.module').then(m => m.Tab2PageModule)
+              import('../start-ups/start-ups.module').then(m => m.StartUpsPageModule)
           }
         ]
       },
       {
-        path: 'tab3',
+        path: 'members',
         children: [
           {
             path: '',
             loadChildren: () =>
-              import('../tab3/tab3.module').then(m => m.Tab3PageModule)
+                import('../members/members.module').then(m => m.MembersPageModule)
+          }
+        ]
+      },
+      {
+        path: 'profile',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+                import('../profile/profile.module').then(m => m.ProfilePageModule)
           }
         ]
       },
       {
         path: '',
-        redirectTo: '/tabs/tab1',
+        redirectTo: '/tabs/home',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/tab1',
+    redirectTo: '/tabs/home',
     pathMatch: 'full'
   }
 ];
