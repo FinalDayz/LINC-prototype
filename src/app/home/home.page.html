@@ -1,7 +1,10 @@
 <ion-header>
+
     <ion-toolbar>
-        <ion-title>Home</ion-title>
+        <ion-button slot="start" color="none" (click)="presentPopover($event)">Filters</ion-button>
+        <ion-searchbar slot="end"></ion-searchbar>
     </ion-toolbar>
+
 </ion-header>
 <br>
 <ion-content>
