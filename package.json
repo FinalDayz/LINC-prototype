@@ -9,7 +9,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "emulate": "npx npm-force-resolutions && npm install && npm run build && npx cap sync android && npx cap open android"
   },
   "resolutions": {
     "@babel/preset-env": "^7.8.7"
