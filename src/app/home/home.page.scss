@@ -1,0 +1,20 @@
+.news-card-title, .news-card-title ion-col {
+  padding: 0;
+}
+
+.news-open-icon {
+  font-size: 16px;
+}
+
+.news-card {
+  height: 120px;
+}
+
+ion-card-title {
+  display: block;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
