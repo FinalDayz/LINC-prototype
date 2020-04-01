@@ -1,9 +1,64 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Profiel</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-app>
 
-<ion-content>
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Profiel</ion-title>
+    </ion-toolbar>
+  </ion-header>
 
-</ion-content>
+  <ion-content>
+
+    <br>
+
+    <ion-avatar align="center">
+      <ion-img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"></ion-img>
+    </ion-avatar>
+
+    <br>
+
+    <ion-list >
+
+      <ion-item>
+        <ion-label position="stacked">Naam:</ion-label>
+        <ion-input type="text" [disabled]="!edit" value="Nick Plokkaar"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Vakgebied:</ion-label>
+        <ion-input type="text" [disabled]="!edit" value="Informatica"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Email:</ion-label>
+        <ion-input type="email" [disabled]="!edit" value="example@gmail.com"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Nummer:</ion-label>
+        <ion-input type="tel" [disabled]="!edit" value="06123456789"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Openbaar:</ion-label>
+        <ion-toggle [disabled]="!edit"></ion-toggle>
+      </ion-item>
+
+    </ion-list>
+
+    <br>
+
+    <ion-footer>
+      <ion-toolbar class="ion-text-center">
+        <ion-button class="edit" style="width: 90%;" (click)="toggleEdit()">
+          <ion-icon [name]="icon" ></ion-icon>
+        </ion-button>
+      </ion-toolbar>
+    </ion-footer>
+
+      <ion-fab-button class="chat" slot="fixed">
+        <ion-icon name="chatbubble"></ion-icon>
+      </ion-fab-button>
+
+  </ion-content>
+
+</ion-app>
