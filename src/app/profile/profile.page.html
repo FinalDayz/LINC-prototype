@@ -6,7 +6,7 @@
     </ion-toolbar>
   </ion-header>
 
-  <ion-content>
+  <ion-content *ngIf="isLoaded">
 
     <br>
 
@@ -16,11 +16,11 @@
 
     <br>
 
-    <ion-list >
+    <ion-list>
 
       <ion-item>
         <ion-label position="stacked">Naam:</ion-label>
-        <ion-input type="text" [disabled]="!edit" value="Nick Plokkaar"></ion-input>
+        <ion-input type="text" [disabled]="!edit" [value]="user.name" ]></ion-input>
       </ion-item>
 
       <ion-item>
@@ -48,17 +48,21 @@
     <br>
 
     <ion-footer>
-      <ion-toolbar class="ion-text-center">
-        <ion-button class="edit" style="width: 90%;" (click)="toggleEdit()">
-          <ion-icon [name]="icon" ></ion-icon>
+      <ion-toolbar class="ion-text-center savebar">
+        <ion-button class="edit" color="none" (click)="toggleEdit()">
+          <ion-icon [name]="icon" style="color: white"></ion-icon>
         </ion-button>
       </ion-toolbar>
     </ion-footer>
 
-      <ion-fab-button class="chat" slot="fixed">
+      <ion-fab-button class="chat" color="none" slot="fixed">
         <ion-icon name="chatbubble"></ion-icon>
       </ion-fab-button>
 
+  </ion-content>
+
+  <ion-content *ngIf="!isLoaded">
+    <ion-text>Laden...</ion-text>
   </ion-content>
 
 </ion-app>

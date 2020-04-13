@@ -13,10 +13,16 @@ ion-toggle {
 
 .edit {
   font-size: 1.3em;
+  width: 90%;
+  background: #3a46ab;
 }
 
 ion-avatar {
   width: 20vw;
   height: auto;
   margin-left: 40vw;
+}
+
+.savebar {
+  --ion-toolbar-background: transparent !important;
 }
