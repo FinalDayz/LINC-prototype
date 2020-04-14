@@ -20,27 +20,27 @@
 
       <ion-item>
         <ion-label position="stacked">Naam:</ion-label>
-        <ion-input type="text" [disabled]="!edit" [value]="user.name" ]></ion-input>
+        <ion-input type="text" [disabled]="!edit" [(ngModel)]="user.name"></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label position="stacked">Vakgebied:</ion-label>
-        <ion-input type="text" [disabled]="!edit" value="Informatica"></ion-input>
+        <ion-input type="text" [disabled]="!edit" [(ngModel)]="user.profession" value="Informatica"></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label position="stacked">Email:</ion-label>
-        <ion-input type="email" [disabled]="!edit" value="example@gmail.com"></ion-input>
+        <ion-input type="email" [disabled]="!edit" [(ngModel)]="user.email" value="example@gmail.com"></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label position="stacked">Nummer:</ion-label>
-        <ion-input type="tel" [disabled]="!edit" value="06123456789"></ion-input>
+        <ion-input type="tel" [disabled]="!edit" [(ngModel)]="user.mobile"></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label position="stacked">Openbaar:</ion-label>
-        <ion-toggle [disabled]="!edit"></ion-toggle>
+        <ion-toggle [disabled]="!edit" [(ngModel)]="user.isPublic"></ion-toggle>
       </ion-item>
 
     </ion-list>

@@ -11,11 +11,13 @@ import { AppComponent } from './app.component';
 import {PopoverComponent} from "./popover/popover.component";
 
 import { HTTP } from "@ionic-native/http/ngx";
+import { HttpClientModule } from "@angular/common/http";
+
 
 @NgModule({
   declarations: [AppComponent, PopoverComponent],
   entryComponents: [PopoverComponent],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule],
   providers: [
     StatusBar,
     HTTP,
